@@ -1,0 +1,33 @@
+uuid: c04d5b00-36bd-4c15-8839-554620edf768
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.related_products
+  module:
+    - node
+    - views
+  theme:
+    - firma_modular
+id: views_block__related_products_block
+theme: firma_modular
+region: content_bottom
+weight: 0
+provider: null
+plugin: 'views_block:related_products-block_1'
+settings:
+  id: 'views_block:related_products-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      product: product
