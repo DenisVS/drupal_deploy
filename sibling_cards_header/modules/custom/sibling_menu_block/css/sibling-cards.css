@@ -1,0 +1,92 @@
+/*sibling terms*/
+
+.wrapper_siblings {
+	display: flex;
+	/* or inline-flex */
+	flex-wrap: wrap;
+}
+
+.wrapper_sibling {
+	height: 115px;
+	---width: 300px;
+	margin: 5px;
+	-----margin: 50px auto;
+	border-radius: 7px 7px 7px 7px;
+	/* VIA CSS MATIC https://goo.gl/cIbnS */
+	-webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+	box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+}
+
+.sibling-img {
+	float: left;
+	height: 110px;
+	width: 110px;
+}
+
+.sibling-img img {
+	border-radius: 7px 0 0 7px;
+	height: 110px;
+
+}
+
+.sibliing-info {
+	float: left;
+	height: 110px;
+	width: 150px;
+	border-radius: 0 7px 10px 7px;
+	background-color: #ffffff;
+}
+
+.sibling-text {
+	height: 110px;
+	width: 150px;
+}
+
+.sibling-text h1 {
+	margin: 0 0 0 38px;
+	padding-top: 52px;
+	font-size: 34px;
+	color: #474747;
+}
+
+.sibling-text h1,
+.product-price-btn p {
+	font-family: 'Bentham', serif;
+}
+
+.sibling-text h2 {
+	margin: 5px 5px 10px 5px;
+	font-size: 13px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: #d2d2d2;
+	letter-spacing: 0.2em;
+}
+
+.sibling-text p {
+	height: 120px;
+	margin: 0 0 0 38px;
+	font-family: 'Playfair Display', serif;
+	color: #8d8d8d;
+	line-height: 1.7em;
+	font-size: 15px;
+	font-weight: lighter;
+	overflow: hidden;
+}
+
+/* HEADER */
+.siblings-header-container {
+	flex: 1;
+	align-content: center;
+
+}
+
+.siblings-header {
+	text-align: center;
+	font-size: 2em;
+	text-transform: uppercase;
+	font-family: "Source Sans Pro";
+	font-weight: 400;
+}

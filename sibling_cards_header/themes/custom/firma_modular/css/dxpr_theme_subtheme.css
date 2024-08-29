@@ -1,0 +1,281 @@
+#dxpr-theme-main-menu {
+  z-index: 1;
+}
+
+/* Frontpage tiles */
+.view-frontpage-tiles .blazy__caption h2.box__title a {
+  display: block !important;
+  color: white !important;
+  font-size: 1.5em !important;
+  font-family: times;
+  /*font-style: italic;*/
+  padding: 10em !important;
+  margin: -10em !important;
+}
+
+
+
+
+
+/* links of slider on main */
+.slick-slide a {
+  text-decoration: none !important;
+}
+
+
+/*title of product in the grid of products*/
+.product-grid-list-title a {
+  text-decoration: none !important;
+  font-size: 1.5em;
+  color: black;
+}
+
+.product-grid-list-title a:hover {
+  color: grey;
+}
+
+
+
+/*hide inactive submenus*/
+section#block-firma-modular-taxonomyproducts>ul.navbar-nav>li.nav-item>.nav-link.dropdown-toggle~ul {
+  display: none;
+}
+
+section#block-firma-modular-taxonomyproducts>ul.navbar-nav>li.nav-item>.nav-link.dropdown-toggle.is-active~ul {
+  display: block;
+}
+
+
+/*to avoid head moving while scrolling*/
+#navbar {
+  left: 0px;
+}
+
+
+/*sidebar width menu*/
+@media (min-width: 900px) {
+  .col-sm-3 {
+    width: 200px !important;
+  }
+}
+
+
+
+/*** dropdown-menu higher ***/
+/** top **/
+/* lighting */
+.affix-top .menu>li:nth-child(1)>ul:nth-child(2).dropdown-menu {
+  padding-top: 5px;
+  top: 70px;
+}
+
+/* lang */
+.affix-top .menu>li:nth-child(6)>ul:nth-child(2).dropdown-menu {
+  top: 70px;
+}
+
+/** next of the page **/
+/* lighting */
+.affix .menu>li:nth-child(1)>ul:nth-child(2).dropdown-menu {
+  padding-top: 5px;
+  top: 50px;
+}
+
+/* lang */
+.affix .menu>li:nth-child(6)>ul:nth-child(2).dropdown-menu {
+  top: 50px;
+}
+
+
+/*** Google Maps  ***/
+* {
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 600px) {
+  .googlemap {
+    margin: 10px !important;
+  }
+
+  .googlemap>iframe {
+    width: 100% !important;
+    height: auto !important;
+    min-height: calc(100vh - 20px);
+  }
+}
+
+/*** prouct categories view product_base_category: title font, decoration and clicable area ***/
+/* h2 */
+
+div.gridstack--view--products-categories-4x div.grid-stack-item div.grid-stack-item-content div.blazy__caption.box__caption h2.box__title {
+  display: block;
+  position: relative;
+  /* font-size: 2em; */
+  text-shadow: 0 5px 6px white;
+  /*top: 72px;*/
+  /*right: 15px;*/
+  /* New size of fonts*/
+  right: 5px;
+  top: 110px;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-family: "Source Sans Pro";
+  font-weight: 400;
+}
+
+/* h2 a  */
+div.gridstack--view--products-categories-4x div.grid-stack-item div.grid-stack-item-content div.blazy__caption.box__caption h2.box__title a {
+  color: black;
+  background: rgba(210, 210, 210, 0.6);
+}
+
+/* Fix mobile view of grid product page top taxonomy terms*/
+@media screen and (max-width: 1200px) {
+  .gridstack.grid-stack-4>.box[gs-w="1"] {
+    width: 100% !important;
+  }
+
+  .gridstack.grid-stack-4>.box[gs-x="1"] {
+    left: unset !important;
+
+  }
+
+  .gridstack.grid-stack-4>.box[gs-x="2"] {
+    left: unset !important;
+  }
+
+  .gridstack.grid-stack-4>.box[gs-x="3"] {
+    left: unset !important;
+  }
+
+  div.gridstack--view--products-categories-4x div.grid-stack-item div.grid-stack-item-content div.blazy__caption.box__caption h2.box__title {
+    top: unset !important;
+  }
+}
+
+
+/* RELATED PRODUCTS */
+#block-views-block-related-products-block {
+  border-top: 1px solid rgb(233, 2, 2);
+  margin-bottom: 100px;
+  margin-top: 100px;
+  
+}
+
+#block-views-block-related-products-block .views-field-title  {
+  font-size: 1.4em;
+}
+/* Just a */
+#block-views-block-related-products-block a {
+  color: gray;
+}
+/* /RELATED PRODUCTS */
+
+/* PRODUCT CATEGORY & RELATED PRODUCTS */
+/* To designate the parent relative to which there will be blocks with absolute positioning. */
+                                                            
+.view-products-list-grid .views-view-responsive-grid__item, #block-views-block-related-products-block .views-view-responsive-grid__item{
+  position: relative;
+  border: 1px solid grey;
+  padding: 3px 3px 0px 3px;
+}
+
+/* Field title */
+.product-grid-list-title a {
+  font-size: 1.4em;
+}
+
+/* Field price */
+.views-field-field-price {
+}
+
+/* Field Units */
+.views-view-responsive-grid__item .views-field.views-field-field-units {
+  float: right;
+}
+
+/* The field field_abstract  */
+.views-view-responsive-grid__item .views-field.views-field-field-abstract .field-content {
+  font-family: "Source Sans Pro";
+  position: relative;
+  font-size: 1.2em;
+  display:flex;
+  min-height: 2em;
+}
+
+/* Just a */
+.views-view-responsive-grid__item .views-field.views-field-field-abstract .field-content a {
+  color: black;
+}
+/* /PRODUCT CATEGORY & SIMILAR PRODUCTS  END */
+
+
+
+/* PRODUCT PAGE */
+
+/* Image of product on it's page */
+.field--name-field-product-image-main>div {
+  padding-right: 3%;
+  padding-bottom: 3%;
+}
+
+/* Line over title in product layout builder  */
+section.block.block-layout-builder.block-field-blocknodeproducttitle.clearfix {
+  border-top: 0.5px solid grey;
+  margin-top: 0;
+}
+
+/* Node Product Title */
+.block-field-blocknodeproducttitle {
+  font-size: 2em;
+}
+
+/* Node Product Abstract */
+.block-field-blocknodeproductfield-abstract.clearfix .field--name-field-abstract {
+  font-size: 26px;
+  line-height: 62px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0em;
+}
+
+
+/* wrapper price. Floating price left */
+.block.block-layout-builder.block-field-blocknodeproductfield-price.clearfix {
+  -position: absolute;
+  float: left;
+}
+
+
+/* Node Product Price. Change font and color */
+.field--name-field-price {
+  font-size: 2em;
+  color: red;
+}
+
+/* wrapper units. floating units to right */
+.block.block-layout-builder.block-field-blocknodeproductfield-units.clearfix {
+  position: relative;
+  float: right;
+}
+
+/* Node Product Units. Alligb with price */
+.field.field--name-field-units.field--type-string.field--label-hidden.field__item {
+  padding-top: 12px;
+}
+
+/* wrapper text. to disable all previous changes */
+.block.block-layout-builder.block-field-blocknodeproductbody.clearfix {
+  content: '';
+    display: table;
+    clear: both;
+}
+
+/* /PRODUCT PAGE END */
+
+
+/* Katalozi view */
+.view-catalogs .field-content a {
+  color: grey !important;;
+}
+

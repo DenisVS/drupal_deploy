@@ -1,0 +1,28 @@
+uuid: babb3adb-ec66-4f51-a639-4e8855cf27c5
+langcode: en
+status: true
+dependencies:
+  module:
+    - sibling_menu_block
+    - taxonomy
+  theme:
+    - firma_modular
+id: firma_modular_siblingmenublock
+theme: firma_modular
+region: content_top
+weight: 0
+provider: null
+plugin: sibling_menu_block
+settings:
+  id: sibling_menu_block
+  label: 'Sibling menu block'
+  label_display: '0'
+  provider: sibling_menu_block
+visibility:
+  'entity_bundle:taxonomy_term':
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    context_mapping:
+      taxonomy_term: '@taxonomy_term.taxonomy_term_route_context:taxonomy_term'
+    bundles:
+      products: products
