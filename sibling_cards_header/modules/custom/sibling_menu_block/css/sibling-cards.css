@@ -78,9 +78,13 @@
 
 /* HEADER */
 .siblings-header-container {
-	flex: 1;
 	align-content: center;
+}
 
+@media (min-width: 600px) {
+	.siblings-header-container {
+		flex: 1;
+	}
 }
 
 .siblings-header {

@@ -2,7 +2,7 @@
 #Install feeds tamper settings, patch for language feedback, install search system
 
 # !!!!!
-SITE_ROOT="/data/sites_php82/modular.prod"
+SITE_ROOT="/data/sites_php82/modular.dev"
 LIST_MODULES="list_modules.txt"
 ### Main points
 # before git: git --global --add safe.directory 
@@ -41,9 +41,11 @@ if [ -n "$DIR_PATCHES_M" ]; then
 	PATCHES_MODULES_CONT=$(ls "$BASEDIR"/"modules/contrib" 2>/dev/null)
 	if [ -n "$PATCHES_MODULES_CONT" ]; then
 		LIST_PATCHES_MODULES=$(ls "$BASEDIR"/"modules/contrib" 2>/dev/null)
-		#echo ASD "$LIST_PATCHES_MODULES"
+		echo ASD "$LIST_PATCHES_MODULES"
+		CONTRIB_MODULES=1
 	else
 		echo There are no modules in directory \"modules/contrib\" to patch or install.
+		CONTRIB_MODULES=0
 	fi
 	### modules/custom
 	PATCHES_MODULES_CUST=$(ls "$BASEDIR"/"modules/custom" 2>/dev/null)
@@ -62,9 +64,10 @@ $(ls "$BASEDIR"/"modules/custom" 2>/dev/null)"
 	
 	for MODULE in ${LIST_PATCHES_MODULES}; do
 		echo "Module: "${MODULE}
-		jexec -U www apache01 composer --working-dir="${SITE_ROOT}" require ${MODULE}
+		if [ "$CONTRIB_MODULES" = 1 ]; then
+			jexec -U www apache01 composer --working-dir="${SITE_ROOT}" require ${MODULE}
+		fi
 		MODULE=$(echo ${MODULE} | grep . | awk -F \: '{print $1}' | awk -F \/ '{print $2}')
-		#MODULE=$(echo ${MODULE})
 		echo "Enable module "${MODULE}
 		jexec -U www apache01 drush -r "${SITE_ROOT}" pm:enable --yes "${MODULE}"	
 	done
