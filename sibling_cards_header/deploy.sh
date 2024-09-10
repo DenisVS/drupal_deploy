@@ -9,7 +9,6 @@
 SITE_TYPE="dev" # If you have a different versions with detail in names, you can assign them here
 SITE_ROOT="/data/sites/php82/modular.$SITE_TYPE" # How looks the Site root from web server.
 SITE_DIR="/zs2T1/sites/php82/modular.$SITE_TYPE" # Site directory from your POV
-LIST_MODULES="list_modules.txt"
 WEBSERVER_CMD_PREFIX="jexec -U www apache02 " # If your commands on web server work in jail or another environment, set prefix here.
 ## /Parameters
 
@@ -32,6 +31,7 @@ fi
 # chown -R www:www "${SITE_DIR}"/htdocs/libraries/
 ### /framework
 
+LIST_MODULES="list_modules.txt"
 
 ### Main points
 # before git: git --global --add safe.directory 
