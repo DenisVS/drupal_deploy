@@ -1,18 +1,18 @@
 #!/bin/sh
-#Install feeds tamper settings, patch for language feedback, install search system
-SITE_TYPE="prod" # If you have a different versions with detail in names, you can assign them here
+# Universal script of deploy for Drupal sites
+
+
+### Framework for Drupal sites on server.
+# Requre Drush launcher
+# Examples below
+## Parameters
+SITE_TYPE="dev" # If you have a different versions with detail in names, you can assign them here
 SITE_ROOT="/data/sites/php82/modular.$SITE_TYPE" # How looks the Site root from web server.
 SITE_DIR="/zs2T1/sites/php82/modular.$SITE_TYPE" # Site directory from your POV
 LIST_MODULES="list_modules.txt"
 WEBSERVER_CMD_PREFIX="jexec -U www apache02 " # If your commands on web server work in jail or another environment, set prefix here.
+## /Parameters
 
-### Main points
-# before git: git --global --add safe.directory 
-# Export current config before commit
-# chown www:www after each copy
-# chown www:www  Before export config
-# After copy config fix domain
-# Export current config before update config files
 BASEDIR=$(dirname "$0")
 echo "Attention!"
 echo "Site root on web server is: ${SITE_ROOT}"
@@ -24,6 +24,24 @@ if [ -z "$uservar" ]; then
 	echo "Invalid parameter. STOP!"
 	exit
 fi
+
+## Examples
+# ${WEBSERVER_CMD_PREFIX}composer --working-dir="${SITE_ROOT}" require ${MODULE}
+# ${WEBSERVER_CMD_PREFIX}drush -r "${SITE_ROOT}" pm:enable --yes "${MODULE}"
+# cp -Rf "$BASEDIR"/libraries/* "${SITE_DIR}"/htdocs/libraries/
+# chown -R www:www "${SITE_DIR}"/htdocs/libraries/
+### /framework
+
+
+### Main points
+# before git: git --global --add safe.directory 
+# Export current config before commit
+# chown www:www after each copy
+# chown www:www  Before export config
+# After copy config fix domain
+# Export current config before update config files
+
+
 
 
 
