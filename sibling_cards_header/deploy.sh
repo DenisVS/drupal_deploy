@@ -78,6 +78,7 @@ if [ -n "$DIR_PATCHES_M" ]; then
 		CONTRIB_MODULES=0
 	fi
 	### modules/custom
+	echo Basedir  "$BASEDIR"
 	PATCHES_MODULES_CUST=$(ls "$BASEDIR"/"modules/custom" 2>/dev/null)
 	if [ -n "$PATCHES_MODULES_CUST" ]; then
 		LIST_PATCHES_MODULES="$LIST_PATCHES_MODULES
@@ -90,6 +91,7 @@ $(ls "$BASEDIR"/"modules/custom" 2>/dev/null)"
 	
 	echo "$LIST_PATCHES_MODULES"
 	cp -Rf "$BASEDIR"/modules/* "${SITE_DIR}"/htdocs/modules/
+	echo "$BASEDIR"'/modules/*' "${SITE_DIR}"'/htdocs/modules/'
 	chown -R www:www "${SITE_DIR}"/htdocs/modules/
 	
 	for MODULE in ${LIST_PATCHES_MODULES}; do
