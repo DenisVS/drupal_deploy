@@ -159,7 +159,7 @@ class SiblingMenuBlock extends BlockBase {
     usort($wholeMenuData, array('Drupal\sibling_menu_block\Plugin\Block\SiblingMenuBlock', 'cmp'));
     $output = '<div class="wrapper_siblings">';
 
-    $output .= '<div class="parent-term-link-navigation-container"><div class="parent-term-link-navigation"><a href="' . $myParent['uri'] . '">' . $myParent['name'] . '&nbsp;</a>🡆</div></div>';
+    $output .= '<div class="parent-term-link-navigation-container"><div class="parent-term-link-navigation"><a href="' . $myParent['uri'] . '">' . $myParent['name'] . '&nbsp;</a>➔</div></div>';
 
     foreach ($wholeMenuData as $field) {
       $output .= '<div class="wrapper_sibling"><div class="sibling-img">
