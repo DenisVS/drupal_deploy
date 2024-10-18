@@ -1,0 +1,23 @@
+uuid: c4e32153-8589-46c5-88de-40f5e27d0a40
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.mobile_slider_576
+  theme:
+    - firma_modular
+id: mobile_slider_576
+label: 'Mobile slider 576'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: '_original image_'
+    breakpoint_id: firma_modular.wide
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: mobile_slider_576
+    breakpoint_id: firma_modular.mobile
+    multiplier: 1x
+breakpoint_group: firma_modular
+fallback_image_style: '_original image_'

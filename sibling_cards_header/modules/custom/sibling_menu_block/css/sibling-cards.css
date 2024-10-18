@@ -6,6 +6,14 @@
 	flex-wrap: wrap;
 }
 
+
+@media (max-width: 600px) {
+    .wrapper_siblings {
+	display: grid !important;
+    }
+}
+
+
 .wrapper_sibling {
 	position: relative;
 	clear: both;

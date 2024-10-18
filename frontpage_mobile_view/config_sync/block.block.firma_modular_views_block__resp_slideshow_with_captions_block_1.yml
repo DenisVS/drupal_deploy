@@ -1,0 +1,29 @@
+uuid: e3fd0933-8314-4ae7-9013-d6f40a7dd803
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.resp_slideshow_with_captions
+  module:
+    - system
+    - views
+  theme:
+    - firma_modular
+id: firma_modular_views_block__resp_slideshow_with_captions_block_1
+theme: firma_modular
+region: content_top
+weight: -9
+provider: null
+plugin: 'views_block:resp_slideshow_with_captions-block_1'
+settings:
+  id: 'views_block:resp_slideshow_with_captions-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

@@ -1,0 +1,252 @@
+/*
+ * SEARCH AUTOCOMPLETE
+ * modular theme.
+ */
+
+/**
+ * THEME modular
+ */
+
+/*field label and button  FOR ALL PAGES EXCEPT MAIN */
+#views-exposed-form-search-api-results-products-search-api-results-products .form--inline.clearfix {
+  top: -3em !important;
+}
+
+/* Results of the search dropdown block FOR ALL PAGES EXCEPT MAIN */
+ul.ui-autocomplete {
+  /* vertical alignment */
+  margin-top: 10px;
+}
+
+/*field label and button FOR MAIN*/
+body.path-frontpage #views-exposed-form-search-api-results-products-search-api-results-products .form--inline.clearfix {
+  top: 0em !important;
+}
+
+/* Results of the search dropdown block FOR MAIN */
+body.path-frontpage ul.ui-autocomplete {
+  /* vertical alignment */
+  margin-top: 60px;
+}
+
+/* Results of the search dropdown block */
+ul.ui-autocomplete {
+  ---position: c !important;
+  /* on center */
+  ---position: static !important;
+  /* on center */
+  float: right;
+  /* fix vertical alignment */
+  left: 0% !important;
+  width: 100% !important
+}
+
+#block-search-api-results-products-form {
+  z-index: 1;
+  /*drop-down over tiles on product categories*/
+}
+
+/* form over the slider */
+.block-views-exposed-filter-blocksearch-api-results-products-search-api-results-products {
+  z-index: 6 !important;
+}
+
+
+/*form edges (but not content inside)*/
+#block-search-api-results-products-form form {
+  /* form over the slider */
+  z-index: 6 !important;
+  /* form position */
+  position: relative;
+
+}
+
+/*field label and button*/
+#views-exposed-form-search-api-results-products-search-api-results-products .form--inline.clearfix {
+  /* block on free space */
+  position: absolute;
+  right: 0px;
+}
+
+/* field and label*/
+.form-item-search-api-fulltext {
+  margin: 0px;
+}
+
+/*label*/
+#views-exposed-form-search-api-results-products-search-api-results-products .form--inline.clearfix label {
+  display: none;
+  height: 0px;
+}
+
+
+/* Input box */
+.block-views-exposed-filter-blocksearch-api-results-products-search-api-results-products input.form-autocomplete {
+  width: 260px;
+  border: 1px solid #f90000;
+  display: block;
+  padding: 9px 4px 9px 40px;
+  background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 240px center !important;
+  background-color: white !important;
+  color: #000000;
+
+}
+
+/* input field*/
+#edit-search-api-fulltext {
+  height: 1.5em;
+  padding: 0px;
+  margin: 2px;
+  opacity: 75%;
+  /* transparency value of field */
+  background-color: white;
+  border: 1px solid red;
+  border-radius: 5px;
+}
+
+/* button */
+#views-exposed-form-search-api-results-products-search-api-results-products .form-actions {
+  height: 0px;
+  display: none;
+}
+
+/* Suggestion menu style */
+ul[data-sa-theme="modular"] {
+  box-shadow: rgba(0, 0, 0, 0.498039) 0 0 15px;
+  background: white;
+  border-bottom: 1px solid #bfbfbf;
+  text-align: left;
+  font-family: 'Lucida Grande', Helvetica, Arial, Verdana, sans-serif;
+  min-width: 350px;
+}
+
+ul[data-sa-theme="modular"] a.ui-menu-item-wrapper,
+ul[data-sa-theme="modular"] a.ui-menu-item-wrapper.ui-state-active {
+  display: block;
+  background: none;
+  border: none;
+}
+
+/* Suggestion containers */
+ul[data-sa-theme="modular"] .ui-autocomplete-content {
+  display: flex;
+  flex-direction: row;
+}
+
+ul[data-sa-theme="modular"] .ui-autocomplete-container {
+  flex: 1 1 100%;
+  padding: 0.5rem;
+}
+
+ul[data-sa-theme="modular"] .ui-autocomplete-container.ui-autocomplete-container-more_results,
+ul[data-sa-theme="modular"] .ui-autocomplete-container.ui-autocomplete-container-no_results {
+  display: block;
+  text-align: center;
+}
+
+/* Suggestion menu elements */
+ul[data-sa-theme="modular"] .ui-autocomplete-container>*,
+ul[data-sa-theme="modular"] .ui-autocomplete-container>*.ui-state-focus,
+ul[data-sa-theme="modular"] .ui-autocomplete-container>*:hover {
+  border-color: #bfbfbf;
+  border-width: 1px 0 0 0;
+  border-style: solid;
+  margin: 0;
+  padding: 0.5rem 0.7rem;
+}
+
+/* Suggestion group header */
+ul[data-sa-theme="modular"] .ui-autocomplete-container>div.ui-autocomplete-field-group {
+  opacity: 1;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  background-color: #ccc;
+  padding: 1px 5px;
+  margin: 0;
+  display: block;
+}
+
+/* Suggestion menu items */
+ul[data-sa-theme="modular"] .ui-autocomplete-container>li.ui-menu-item {
+  background: white;
+}
+
+/* Suggestion menu items hovering */
+ul[data-sa-theme="modular"] .ui-autocomplete-container>.ui-menu-item.ui-state-focus,
+ul[data-sa-theme="modular"] .ui-autocomplete-container>.ui-menu-item:hover {
+  background: #b90012;
+  border-top-color: #641f1f;
+  color: white;
+}
+
+/* Searched term whithin a suggestion item */
+ul[data-sa-theme="modular"] .ui-autocomplete-field-term {
+  font-weight: bold;
+  border-bottom: 1px dotted;
+}
+
+/* Suggestion item fields CORRECTED */
+ul[data-sa-theme="modular"] .ui-autocomplete-container:not(.ui-autocomplete-container-more_results):not(.ui-autocomplete-container-no_results) .ui-autocomplete-fields {
+  display: table;
+}
+
+ul[data-sa-theme="modular"] .ui-autocomplete-fields>* {
+  font-size: 0.85em;
+  line-height: 1.3em;
+  color: #6f6f6f;
+  display: block;
+}
+
+ul[data-sa-theme="modular"] .ui-autocomplete-fields .ui-autocomplete-field-title {
+  font-weight: bold;
+  color: black;
+}
+
+ul[data-sa-theme="modular"] .ui-autocomplete-fields .ui-autocomplete-field-field_prod_id {
+  font-weight: bold;
+  color: #a42c2c;
+  float: left;
+}
+
+.ui-autocomplete-field-field_prod_id:after {
+  content: "\00a0\00a0";
+}
+
+ul[data-sa-theme="modular"] .ui-autocomplete-fields .ui-autocomplete-field-field_product_image_main {
+  ---display: table-cell;
+  vertical-align: middle;
+  padding-right: 0.8em;
+  width: 60px;
+  height: 60px;
+  float: left;
+  clear: both;
+}
+
+ul[data-sa-theme="modular"] .ui-autocomplete-fields .ui-autocomplete-field-field_product_image_main img {
+  width: 100%;
+  height: 4em;
+  object-fit: cover;
+  border-radius: 5%;
+  vertical-align: middle;
+}
+
+/* Suggestion focused fields */
+ul[data-sa-theme="modular"] .ui-autocomplete-container>li.ui-menu-item.ui-state-focus .ui-autocomplete-fields>*,
+ul[data-sa-theme="modular"] .ui-autocomplete-container>li.ui-menu-item:hover .ui-autocomplete-fields>* {
+  color: white;
+}
+
+/* Suggestion "no result" and "more resul" customizations */
+ul[data-sa-theme="modular"] .ui-autocomplete-container>div.ui-autocomplete-field-group.no_results+li.ui-menu-item,
+ul[data-sa-theme="modular"] .ui-autocomplete-container>div.ui-autocomplete-field-group.more_results+li.ui-menu-item {
+  padding: 0;
+}
+
+ul[data-sa-theme="modular"] .ui-autocomplete-container>div.ui-autocomplete-field-group.no_results+li.ui-menu-item .ui-autocomplete-fields>*:first-child,
+ul[data-sa-theme="modular"] .ui-autocomplete-container>div.ui-autocomplete-field-group.more_results+li.ui-menu-item .ui-autocomplete-fields>*:first-child {
+  font-weight: normal;
+  text-align: center;
+  font-style: italic;
+}

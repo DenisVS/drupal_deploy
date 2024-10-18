@@ -1,0 +1,19 @@
+uuid: 3c9994bb-1a4e-4f0d-89ee-63f1d5680147
+langcode: en
+status: true
+dependencies:
+  module:
+    - image_effects
+name: mobile_slider_576
+label: 'Mobile slider 576'
+effects:
+  ebbc9deb-ed0e-4711-a6e2-f1114448fa64:
+    uuid: ebbc9deb-ed0e-4711-a6e2-f1114448fa64
+    id: image_effects_scale_and_smart_crop
+    weight: 1
+    data:
+      width: '576'
+      height: '576'
+      upscale: false
+      simulate: false
+      algorithm: entropy_slice

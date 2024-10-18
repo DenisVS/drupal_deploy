@@ -1,0 +1,3 @@
+block.block.firma_modular_views_block__slideshow_block_1.yml
+views.view.slideshow.yml
+views.view.slideshow_test.yml

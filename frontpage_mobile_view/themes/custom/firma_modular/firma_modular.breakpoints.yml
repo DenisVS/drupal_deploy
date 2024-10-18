@@ -1,0 +1,15 @@
+firma_modular.mobile:
+  label: mobile
+  mediaQuery: '(max-width: 576px)'
+  weight: 0
+  multipliers:
+    - 1x
+firma_modular.wide:
+  label: wide
+  mediaQuery: 'screen and (min-width: 576px)'
+  weight: 1
+  multipliers:
+    - 1x
+
+
+
